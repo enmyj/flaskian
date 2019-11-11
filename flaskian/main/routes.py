@@ -3,4 +3,4 @@ from flask import render_template
 
 @bp.route('/')
 def index():
-    return render_template('ian.html')
+    return render_template('base.html')
