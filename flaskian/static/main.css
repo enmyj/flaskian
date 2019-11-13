@@ -70,3 +70,5 @@ a:focus {
 .icon:hover {
   fill: #000
 }
+
+.tab { margin-left: 60px; }
