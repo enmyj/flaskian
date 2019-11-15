@@ -16,6 +16,6 @@ docker build -t ian .
 docker run --rm --detach \
     --name flaskian \
     --network nginx-proxy \
-    --env "VIRTUAL_HOST=ianmyjer.com" \
-    --env "LETSENCRYPT_HOST=ianmyjer.com" \
+    --env "VIRTUAL_HOST=ianmyjer.com, www.ianmyjer.com" \
+    --env "LETSENCRYPT_HOST=ianmyjer.com, www.ianmyjer.com" \
     ian:latest
