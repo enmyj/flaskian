@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "app_function": "ian.app",
+        "aws_region": "us-east-2",
+        "profile_name": "default",
+        "project_name": "flaskian",
+        "runtime": "python3.7",
+        "s3_bucket": "zappa-nr3b5z1tv"
+    }
+}
