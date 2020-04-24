@@ -9,7 +9,11 @@ services:
     restart: always
     networks:
       - web
-    # labels:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.whoami.rule=Host(`ianmyjer.com`)"
+      - "traefik.http.routers.whoami.entrypoints=websecure"
+      - "traefik.http.routers.whoami.tls.certresolver=myhttpchallenge"
 
 networks:
   web:
