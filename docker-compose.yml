@@ -11,9 +11,11 @@ services:
       - web
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.whoami.rule=Host(`ianmyjer.com`)"
-      - "traefik.http.routers.whoami.entrypoints=websecure"
-      - "traefik.http.routers.whoami.tls.certresolver=myhttpchallenge"
+      - "traefik.http.routers.flaskian.rule=Host(`ianmyjer.com`)"
+      - "traefik.http.routers.tls=true"
+      # - "traefik.http.routers.flaskian.entrypoints=websecure"
+      # - "traefik.http.routers.flaskian.entrypoints=web"
+      - "traefik.http.routers.flaskian.tls.certresolver=myhttpchallenge"
 
 networks:
   web:
