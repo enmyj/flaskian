@@ -1,7 +1,11 @@
-FROM python
+FROM continuumio/miniconda3
+SHELL ["/bin/bash", "-c"]
 EXPOSE 8000
 
-RUN pip install gunicorn flask 
+# easiest way to handle anaconda/docker
+# just update the base environment
+COPY environment.yml environment.yml
+RUN /opt/conda/bin/conda env update --file environment.yml
 
 # create user
 RUN useradd -ms /bin/bash ian

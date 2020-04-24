@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  flaskian:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ian
+    restart: always
+    networks:
+      - web
+    # labels:
+
+networks:
+  web:
+
